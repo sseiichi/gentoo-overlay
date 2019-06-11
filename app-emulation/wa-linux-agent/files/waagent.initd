@@ -2,7 +2,7 @@
 
 command=/usr/sbin/waagent
 pidfile=/run/waagent.pid
-command_args=-daemon
+command_args=-start
 command_background=true
 name="Azure Linux Agent"
 
