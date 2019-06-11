@@ -1,2 +1,9 @@
 # gentoo-overlay
-My overlay for gentoo
+My overlay for Gentoo Linux.
+
+```
+├── app-emulation
+│   └── wa-linux-agent
+└── not yet
+    └── not yet
+```
