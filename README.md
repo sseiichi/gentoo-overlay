@@ -1,5 +1,5 @@
 # gentoo-overlay
-My overlay for Gentoo Linux...
+My overlay for Gentoo Linux.
 
 ```
 ├── app-emulation
