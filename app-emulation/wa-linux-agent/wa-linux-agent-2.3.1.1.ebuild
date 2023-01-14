@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=6
+EAPI=7
 
-PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6,3_7,3_8,3_9} )
+PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6,3_7,3_8,3_9,3_10,3_11} )
 
 inherit distutils-r1 eutils
 
@@ -36,7 +36,7 @@ S="${WORKDIR}/WALinuxAgent-${PV}"
 src_prepare() {
 	# do not install tests
 	rm -rf tests
-	
+
 	# allow root login
 	# use ed25519 instead of rsa
 	sed -i \
@@ -70,6 +70,6 @@ python_install_all() {
 	newins config/waagent.logrotate waagent
 
 	keepdir /var/lib/waagent
-	
+
 	distutils-r1_python_install_all
 }
