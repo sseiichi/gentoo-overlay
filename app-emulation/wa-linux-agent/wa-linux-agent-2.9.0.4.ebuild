@@ -4,7 +4,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6,3_7,3_8,3_9} )
+PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6,3_7,3_8,3_9,3_10,3_11} )
 
 inherit distutils-r1 eutils
 
@@ -22,6 +22,7 @@ RDEPEND="${DEPEND}
 	>=dev-libs/openssl-1.0.0:*
 	>=net-misc/openssh-5.3
 	dev-python/pyasn1[${PYTHON_USEDEP}]
+	dev-python/distro
 	sys-apps/util-linux
 	sys-block/parted
 	sys-apps/shadow
@@ -36,7 +37,7 @@ S="${WORKDIR}/WALinuxAgent-${PV}"
 src_prepare() {
 	# do not install tests
 	rm -rf tests
-	
+
 	# allow root login
 	# use ed25519 instead of rsa
 	sed -i \
@@ -70,6 +71,6 @@ python_install_all() {
 	newins config/waagent.logrotate waagent
 
 	keepdir /var/lib/waagent
-	
+
 	distutils-r1_python_install_all
 }

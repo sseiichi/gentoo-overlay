@@ -22,6 +22,7 @@ RDEPEND="${DEPEND}
 	>=dev-libs/openssl-1.0.0:*
 	>=net-misc/openssh-5.3
 	dev-python/pyasn1[${PYTHON_USEDEP}]
+	dev-python/distro
 	sys-apps/util-linux
 	sys-block/parted
 	sys-apps/shadow
