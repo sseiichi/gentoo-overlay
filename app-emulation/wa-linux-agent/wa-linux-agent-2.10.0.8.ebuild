@@ -2,11 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=7
+EAPI=8
 
-PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6,3_7,3_8,3_9,3_10,3_11} )
+PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6,3_7,3_8,3_9,3_10,3_11,3_12} )
 
-#inherit distutils-r1 eutils
 inherit distutils-r1
 
 DESCRIPTION="Microsoft Azure Linux Guest Agent"
